@@ -21,6 +21,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
+Plug 'vim-scripts/indentpython.vim'
 call plug#end()
 
 let g:mapleader = ","
