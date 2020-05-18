@@ -2,11 +2,14 @@
 
 set -x
 
-open /Applications/Bear.app/
 open /Applications/Safari.app/
+open /Applications/Bear.app/
 pkill Brave\ Browser
 pkill -x Mail
 pkill -x Messages
+pkill Slack
+pkill -x Calendar
+pkill Basecamp\ 3
 bash ~/dotfiles/bash/dnd-on.sh
 sleep 0.5
-open /Applications/iTerm.app/
+open /Applications/Safari.app/
