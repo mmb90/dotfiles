@@ -4,13 +4,17 @@ set nocompatible
 
 call plug#begin('~/dotfiles/vim/plugged')
 Plug 'altercation/vim-colors-solarized'
+Plug 'cespare/vim-toml'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'guns/vim-sexp'
+Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }
 Plug 'hashivim/vim-terraform'
 Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }
 Plug 'jpalardy/vim-slime', { 'for': 'python' } " Needed for vim-ipython-cell
 Plug 'itchyny/lightline.vim'
 Plug 'jnurmine/Zenburn'
+Plug 'jpalardy/vim-slime', { 'for': 'python' } " Needed for vim-ipython-cell
+Plug 'psf/black', { 'branch': 'stable' }
 Plug 'terryma/vim-expand-region'
 Plug 'tmux-plugins/vim-tmux-focus-events' " Used for autoread file on change.
 Plug 'tpope/vim-commentary'
@@ -42,7 +46,7 @@ set t_Co=256
 syntax on
 
 " Set color theme
-set background=dark
+set background=light
 colorscheme solarized
 set colorcolumn=80
 
@@ -165,6 +169,11 @@ function! LightlinePercent()
   return winwidth(0) > 70 ? (100 * line('.') / line('$')) . '%' : ''
 endfunction
 
+" Python formatter
+" Run Black on save.
+autocmd BufWritePre *.py execute ':Black'
+let g:black_linelength = 80
+
 let g:slime_target = "tmux"
 let g:slime_no_mappings = 1
 let g:slime_python_ipython = 1
@@ -173,4 +182,4 @@ nmap cpp <Plug>SlimeParagraphSend
 nmap cpv <Plug>SlimeConfig
 
 " Clojure
-let g:clojure_fuzzy_indent_patterns = ['^with', '^def', '^let', '^fdef']
+let g:clojure_fuzzy_indent_patterns = ['^with', '^def', '^let', '^fdef', '^render']
