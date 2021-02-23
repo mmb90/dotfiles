@@ -12,8 +12,6 @@
 	default = simple
 [github]
 	user = burbma
-[credential]
-	helper = osxkeychain
 [alias]
   lg = log --graph --pretty=format:' %C(red)%h%C(reset) - %s\n %C(blue)<%an> %C(green)%ar%C(yellow)%d%C(reset)\n'
   lga = lg --all
