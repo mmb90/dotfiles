@@ -176,3 +176,6 @@ let g:slime_python_ipython = 1
 xmap cpp <Plug>SlimeRegionSend
 nmap cpp <Plug>SlimeParagraphSend
 nmap cpv <Plug>SlimeConfig
+
+" Clojure
+autocmd FileType clojure nnoremap <buffer> cpe :%Eval<cr>
