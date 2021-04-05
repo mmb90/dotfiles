@@ -2044,7 +2044,7 @@
 		</dict>
 	</dict>
 	<key>Default Bookmark Guid</key>
-	<string>5B32F64E-8638-4810-9972-DA7138136396</string>
+	<string>EC44712B-98AB-42FD-A579-2385FADB26F5</string>
 	<key>DimBackgroundWindows</key>
 	<false/>
 	<key>DimInactiveSplitPanes</key>
@@ -6227,8 +6227,6 @@
 			<string>kNextWindowPointerAction</string>
 		</dict>
 	</dict>
-	<key>PreventEscapeSequenceFromClearingHistory</key>
-	<true/>
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>QuitWhenAllWindowsClosed</key>
